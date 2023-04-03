@@ -23,9 +23,14 @@ const corsOptions = {
     }
 }
 
-// app.use(cors(corsOptions));
+//app.use(cors(corsOptions));
+// app.use(cors({
+//     origin: '*'
+// }));
+
+const cors = require('cors');
 app.use(cors({
-    origin: '*'
+    origin: 'https://mern-apv-frontend-bice.vercel.app'
 }));
 
 app.use("/api/veterinarios", veterinarioRoutes);
